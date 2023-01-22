@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .error {
+          color: red;
+        }
+      </style>
+</head>
+<body>
+    <div style="text-align:center;">
+        <h1>Please enter your details</h1>
+
+    <!-- Below is the html for the form details -->
+    <form action="#" th:action="@{/contact}" th:object="${contact}" method="post">
+        
+        <p>Name: <input type="text" th:field="*{name}" placeholder="Full name"/></p>
+        <p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</p>
+        
+        <p>Email: <input type="text" th:field="*{email}" placeholder="example@gmail.com"/></p>
+        <p class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</p>
+        
+        <p>Phone: <input type="text" th:field="*{phone}" placeholder="+65"/></p>
+        <p class="error" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Phone Error</p>
+        
+        <p>Date of Birth: <input type="date" th:field="*{dob}" value="" min="1980-01-01" max="2005-12-31" /></p>
+        <p class="error" data-th-if="${#fields.hasErrors('dob')}" data-th-errors="*{dob}"></p>
+
+    <!-- Below is the html for the submit -->
+        <input type="submit" value="Save">
+        <input type="reset" value="Clear">
+    </form>
+        <br/>
+        <a href="http://localhost:8080">
+        <button>
+            Return to Index
+        </button>
+        </a>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <div style="text-align:center;">
+        <h1>Your details have been saved!</h1>
+
+<body>
+        <!-- Below is the html for the form details results -->
+    
+    <p th:text="${contact.name}" >
+    <p th:text="${contact.email}" >
+    <p th:text="${contact.phone}" >
+    <p th:text="${contact.dob}" > 
+    
+    <form method="post" action="@{/result}"></form>
+    
+
+    <a href="http://localhost:8080">
+        <button>
+            Index
+        </button>
+    </a>
+
+    <a href="http://localhost:8080/list">
+        <button>
+            Contact List
+        </button>
+    </a>
+    
+</div>
+    
+</body>
+
+</html>

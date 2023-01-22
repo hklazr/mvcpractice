@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<div style="text-align:center;">
+    <h1>INDEX PAGE</h1>
+
+<body>
+    <style type="text/css">
+        .wrapper {
+            text-align: center;
+        }
+        .wrapper ul {
+            display: inline-block;
+            margin: 2;
+            padding: 0;
+            /* For IE, the outcast */
+            zoom:1;
+            *display: inline;
+        }
+        
+    </style>
+    <!-- Below is using unordered list & list for the hyperlinks -->
+    <div class="wrapper">
+        <ul>
+            <li><a th:href="@{/form}">Person Contact Form</a></li>
+            <br>
+            <li><a th:href="@{/list}">Contact List</a></li>
+        </ul>
+   
+</div>
+</body>
+</html>
